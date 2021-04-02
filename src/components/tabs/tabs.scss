@@ -1,0 +1,43 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.tabs__list {
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tabs__button {
+  @include button;
+  @include hover-active-button-frame;
+
+  width: 195px;
+  min-height: 50px;
+  padding: 10px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: $font-semidark;
+  text-transform: none;
+
+  background-color: $major-bg;
+  border: 1px solid $border;
+  cursor: pointer;
+}
+
+.tabs__button--active {
+  @include hover-active-button-default;
+
+  color: $font-light;
+
+  background-color: $accent;
+  border: 0;
+}
+
+.tabs__contacts {
+  margin-top: 15px;
+}

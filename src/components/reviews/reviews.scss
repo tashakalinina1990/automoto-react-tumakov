@@ -1,0 +1,179 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.reviews {
+  position: relative;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.reviews__item {
+  padding: 20px 0;
+
+  border-bottom: 1px solid $border;
+}
+
+.reviews__plus,
+.reviews__minus {
+  position: relative;
+
+  padding-left: 19px;
+}
+
+.reviews__author {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: $font-semidark;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-top: 12px;
+
+  font-weight: 600;
+  color: $font-dark;
+
+  &--plus::before,
+  &--minus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: auto;
+    height: 21px;
+
+    color: $accent;
+  }
+
+  &--plus::before {
+    content: "+";
+  }
+
+  &--minus::before {
+    content: "–";
+  }
+}
+
+.reviews__content {
+  margin: 0;
+  margin-top: 3px;
+
+  font-weight: 400;
+}
+
+.reviews__rating {
+  display: flex;
+  margin-top: 20px;
+}
+
+.reviews__stars {
+  display: flex;
+  margin-right: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.reviews__star {
+  width: 17px;
+  height: 16px;
+
+  background-repeat: no-repeat;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &--active {
+    background-image: url("../../assets/img/star-active.svg");
+  }
+
+  &--inactive {
+    background-image: url("../../assets/img/star-inactive.svg");
+  }
+}
+
+.reviews__advice {
+  font-weight: 400;
+  color: $accent;
+}
+
+.reviews__bottom {
+  display: flex;
+  margin-top: 26px;
+}
+
+.reviews__date {
+  margin: 0;
+  margin-right: 26px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: $font-dark;
+
+  opacity: 0.4;
+}
+
+.reviews__reply {
+  @include font-hover-active;
+
+  height: 22px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $accent;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.reviews__review-button {
+  @include button;
+  @include hover-active-button-frame;
+
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  width: 189px;
+  min-height: 52px;
+
+  color: $accent;
+  letter-spacing: 0.12em;
+
+  background-color: transparent;
+  border: 1px solid $accent;
+  cursor: pointer;
+}
+
+.reviews__blank {
+  display: block;
+  min-height: 411px;
+
+  text-align: center;
+}

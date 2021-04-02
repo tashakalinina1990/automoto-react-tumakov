@@ -1,0 +1,148 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.car-info__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  color: $font-semidark;
+}
+
+.car-info__list {
+  display: flex;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.car-info__item {
+  position: relative;
+
+  min-width: 70px;
+  margin-right: 10px;
+  padding-top: 40px;
+
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--engine-type::before {
+    width: 53px;
+    margin-left: -26.5px;
+
+    background-image: url("../../assets/img/engine-type.svg");
+  }
+
+  &--transmission::before {
+    background-image: url("../../assets/img/transmission.svg");
+  }
+
+  &--power::before {
+    background-image: url("../../assets/img/power.svg");
+  }
+
+  &--engine-size::before {
+    background-image: url("../../assets/img/engine-size.svg");
+  }
+}
+
+.car-info__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $font-semidark;
+  text-transform: lowercase;
+
+  opacity: 0.5;
+}
+
+.car-info__price {
+  display: flex;
+}
+
+.car-info__cost {
+  margin: 0;
+  margin-top: 37px;
+  margin-right: 33px;
+
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 48px;
+  color: $font-semidark;
+}
+
+.car-info__discount {
+  position: relative;
+
+  margin: 0;
+  margin-top: 48.5px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: $font-semidark;
+
+  opacity: 0.5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -3px;
+
+    width: 123px;
+    height: 1px;
+
+    background-color: $font-semidark;
+    transform: rotate(-5deg);
+  }
+}
+
+.car-info__order,
+.car-info__credit {
+  @include button;
+
+  min-height: 52px;
+  padding: 10px;
+
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+}
+
+.car-info__order {
+  @include hover-active-button-default;
+
+  width: 196px;
+  margin-top: 37px;
+
+  color: $font-light;
+
+  background-color: $accent;
+}
+
+.car-info__credit {
+  @include hover-active-button-frame;
+
+  width: 222px;
+  margin-top: 16px;
+
+  color: $accent;
+
+  border: 1px solid $accent;
+}

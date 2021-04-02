@@ -1,0 +1,61 @@
+@import "./_variables.scss";
+
+@mixin font-hover-active {
+  &:hover {
+    color: $accent;
+  }
+
+  &:active {
+    color: $additional-accent;
+  }
+}
+
+@mixin font {
+  font-style: normal;
+  font-family: "opensans", "arial", sans-serif;
+}
+
+@mixin navigation-font {
+  @include font-hover-active;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: $font-semidark;
+  text-decoration: none;
+}
+
+@mixin button {
+  @include font;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@mixin hover-active-button-default {
+  &:hover {
+    background-color: $additional-accent;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@mixin hover-active-button-frame {
+  &:hover {
+    color: $font-light;
+
+    background-color: $accent;
+    border: 0;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

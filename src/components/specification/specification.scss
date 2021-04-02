@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+
+.specification__table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.specification__tbody {
+  vertical-align: inherit;
+}
+
+.specification__row {
+  height: 50px;
+  padding: 0;
+
+  border-bottom: 1px solid $border;
+}
+
+.specification__title {
+  width: 272.5px;
+  padding: 0;
+  padding-top: 20px;
+  padding-right: 19.5px;
+
+  font-weight: inherit;
+  text-align: left;
+  color: $font-semidark;
+}
+
+.specification__value {
+  width: 291.5px;
+  padding: 0;
+
+  text-align: right;
+  color: $font-dark;
+}

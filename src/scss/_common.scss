@@ -1,0 +1,28 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  @include font;
+
+  min-width: 1024px;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -1,0 +1,184 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.review-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.review-popup__wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 698px;
+  height: 415px;
+  margin-top: -207.5px;
+  margin-left: -349px;
+  padding: 35px;
+  padding-top: 30px;
+
+  background-color: $minor-bg;
+}
+
+.review-popup__title {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: $font-semidark;
+}
+
+.review-popup__form-wrap {
+  display: flex;
+}
+
+.review-popup__left-side {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 47px;
+  margin-right: 28px;
+}
+
+.review-popup__right-side {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 53px;
+}
+
+.review-popup__input {
+  @include font;
+
+  position: relative;
+
+  width: 300px;
+  height: 50px;
+  margin-bottom: 16px;
+  padding: 10px 25px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: $font-semidark;
+
+  border: 1px solid $border-form;
+
+  &--required {
+    background-image: url("../../assets/img/required.svg");
+    background-repeat: no-repeat;
+    background-position: 11px 12px;
+  }
+
+  &--error {
+    border-color: $red;
+  }
+
+  &--comment {
+    height: 118px;
+    margin-top: 30px;
+
+    resize: none;
+  }
+}
+
+.review-popup__error {
+  position: absolute;
+
+  display: none;
+  margin-top: -23px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: $error;
+
+  &--comment {
+    margin-top: 33px;
+  }
+
+  &--enable {
+    display: block;
+  }
+}
+
+.review-popup__rating-wrap {
+  display: flex;
+}
+
+.review-popup__rating-label {
+  margin-top: 5px;
+  margin-right: 14px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.review-popup__rating {
+  width: 27px;
+  height: 25px;
+  margin: 0;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
+
+  &--inactive {
+    background-image: url("../../assets/img/star-inactive-big.svg");
+  }
+
+  &--active {
+    background-image: url("../../assets/img/star-active-big.svg");
+  }
+}
+
+.review-popup__submit {
+  @include button;
+  @include hover-active-button-default;
+
+  width: 190px;
+  min-height: 52px;
+  margin-top: 19px;
+  margin-right: auto;
+  margin-left: auto;
+
+  color: $font-light;
+
+  background-color: $accent;
+  border: 0;
+  cursor: pointer;
+}
+
+.review-popup__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  width: 30px;
+  height: 32px;
+
+  background-color: transparent;
+  background-image: url("../../assets//img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

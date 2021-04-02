@@ -1,0 +1,32 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.footer {
+  min-height: 82px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  background-color: $minor-bg;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-nav__item {
+  margin-bottom: 5px;
+
+  &:not(:last-child) {
+    margin-right: 67px;
+  }
+}
+
+.footer-nav__link {
+  @include navigation-font;
+}
